@@ -2,6 +2,12 @@
 * {
   box-sizing: border-box;
 }
+*:focus {
+  outline: 2px dotted #1E90FF;
+  outline-offset: 2px;
+}
+
+
 
 html {
   height: 100%;
@@ -12,12 +18,13 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   font-weight: 400;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 21px;
   letter-spacing: 2px;
   height: 100%;
+  color: #222222;
 }
 
 /* CONTAINER */
@@ -33,4 +40,198 @@ body {
 /* MAIN */
 .main-content {
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
+
+.global-wrapper {
+  flex-grow: 1;
+  display: flex;
+}
+
+.hero {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  background-image: url('../img/Rectangle\ 1.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.hero-content {
+  width: 285px;
+}
+
+.hero-heading {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.hero-link {
+  font-size: 16px;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #1E90FF;
+}
+
+.hero-link-inner {
+  display: flex;
+  padding: 12px 24px;
+}
+
+.hero-link-inner::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  background-image: url('../img/Vector.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-link-text {
+  
+}
+
+.latest-videos {
+  max-width: 600px;
+  width: 100%;
+  padding: 54px;
+}
+
+.latest-videos-heading {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 29px;
+}
+
+.latest-videos-diveder {
+  border: 1px solid #999;
+  margin-bottom: 24px;
+}
+.latest-videos-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 24px;
+
+}
+.latest-videos-item :not(:last-child){
+  margin-bottom: 10px;
+}
+.item-latest-videos {
+  display: flex;
+  align-items: center;
+  width: 492px;
+
+}
+.item-latest-videos-img {
+  display: flex;
+  margin-right: 16px;
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
+}
+.item-latest-videos-info {
+}
+
+.item-latest-videos-heading {
+  line-height: 22px;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.item-latest-videos-link{
+  font-weight: 400;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  color: #222;
+}
+.item-latest-videos-link:hover {
+  color: #1e90ff;
+}
+.item-latest-videos-link:active {
+  color: rgba(30, 144, 255, 0.6);
+}
+.item-latest-videos-meta {
+  font-family: 'Roboto Condensed', sans-serif;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666666;
+} 
+
+
+.item-latest-videos-published-at {
+  margin-right: 24px;
+  display: flex;
+  align-items: center;
+}
+.item-latest-videos-published-at::before {
+ 
+  background-image: url('/img/Vector-1.svg');
+  
+}
+.item-latest-videos-views {
+  display: flex;
+  align-items: center;
+}
+.item-latest-videos-views::before {
+  background-image: url('/img/Vector-1.svg');
+}
+.item-latest-videos-icon::before {
+  display: inline-block;
+  content: '';
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 4px;
+}
+
+.load-more-button {
+  border: none;
+  background-color: #1E90FF;
+  color: #fff;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  padding: 17px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.load-more-button:hover {
+  opacity: 0.8;
+}
+.load-more-button:active {
+  opacity: 0.6;
+}
+
+/* RETINA BACKGROUND IMAGE */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+  .hero {
+  background-image: url('../img/Rectangle\@2x 1.png');
+  }
+}
+
